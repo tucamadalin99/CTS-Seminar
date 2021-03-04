@@ -7,13 +7,19 @@ import java.util.List;
 import java.util.Scanner;
 
 import ro.ase.cts.classes.Angajat;
+import ro.ase.cts.classes.Aplicant;
 
-public class AngajatReader {
+public class AngajatReader extends AplicantReader {
 
-	public static List<Angajat> readAngajati(String file) throws FileNotFoundException {
-		Scanner input2 = new Scanner(new File(file));
+	public AngajatReader(String fileName) {
+		super(fileName);
+		// TODO Auto-generated constructor stub
+	}
+
+	public List<Aplicant> citesteAplicanti() throws FileNotFoundException {
+		Scanner input2 = new Scanner(new File(super.getFileName()));
 		input2.useDelimiter(",");
-		List<Angajat> angajati = new ArrayList<Angajat>();
+		List<Aplicant> angajati = new ArrayList<Aplicant>();
 
 		while (input2.hasNext()) {
 			String nume = input2.next();
