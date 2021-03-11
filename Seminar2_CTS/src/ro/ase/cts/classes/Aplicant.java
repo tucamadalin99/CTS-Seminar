@@ -1,12 +1,14 @@
 package ro.ase.cts.classes;
 
+import java.util.Arrays;
+
 public abstract class Aplicant {
 	protected String nume;
 	protected String prenume;
 	protected int varsta;
 	protected int punctaj;
-	protected int nr_proiecte;
-	protected String[] denumireProiect;
+	protected int nrProiecte;
+	protected String[] denumiriProiecte;
 	
 
 	public String getNume() {
@@ -33,11 +35,14 @@ public abstract class Aplicant {
 		this.varsta = varsta;
 	} 
 
-	public void statut() {
-		if (punctaj > 80)
-			System.out.println("Aplicantul " + nume + " " + prenume + " a fost acceptat.");
-		else
-			System.out.println("Aplicantul " + nume + " " + prenume + " nu a fost acceptat.");
+	public void afiseazaStatus(Proiect proiect) {
+		System.out.print("Aplicantul " + nume + " " + prenume);
+		if (punctaj > proiect.getPragAcceptare()) {
+			System.out.println(" a fost acceptat.");
+		}
+		else {
+			System.out.println(" nu a fost acceptat.");
+		}
 	}
 
 	public int getPunctaj() {
@@ -62,17 +67,25 @@ public abstract class Aplicant {
 		this.prenume = prenume;
 		this.varsta = varsta;
 		this.punctaj = punctaj;
-		this.nr_proiecte = nr_proiecte;
-		this.denumireProiect = denumireProiect;
+		this.nrProiecte = nr_proiecte;
+		this.denumiriProiecte = denumireProiect;
 	}
 
-	public int getNr_proiecte() {
-		return nr_proiecte;
+	public int getNrProiecte() {
+		return nrProiecte;
 	}
 
-	public void setNr_proiecte(int nr_proiecte, String[] vect) {
-		this.nr_proiecte = nr_proiecte;
-		this.denumireProiect = vect;
+	public void setNrProiecte(int nrProiecte, String[] vect) {
+		this.nrProiecte = nrProiecte;
+		this.denumiriProiecte = vect;
 	}
+
+	@Override
+	public String toString() {
+		return "Aplicant [nume=" + nume + ", prenume=" + prenume + ", varsta=" + varsta + ", punctaj=" + punctaj
+				+ ", nrProiecte=" + nrProiecte + ", denumiriProiecte=" + Arrays.toString(denumiriProiecte) + "]";
+	}
+	
+	
 
 }

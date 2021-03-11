@@ -5,6 +5,7 @@ import java.util.List;
 
 import ro.ase.cts.classes.Angajat;
 import ro.ase.cts.classes.Aplicant;
+import ro.ase.cts.classes.Proiect;
 import ro.ase.cts.classes.Student;
 import ro.ase.cts.readers.AngajatReader;
 import ro.ase.cts.readers.AplicantReader;
@@ -26,8 +27,10 @@ public class Program {
 
 		try {
 			listaAplicanti = citesteAplicanti(aplicantReader);
+			Proiect proiect = new Proiect(80);
 			for (Aplicant angajat : listaAplicanti) {
 				System.out.println(angajat.toString());
+				angajat.afiseazaStatus(proiect);
 				System.out.println(angajat.getSumaFinantare());
 			}
 		} catch (FileNotFoundException e) {
