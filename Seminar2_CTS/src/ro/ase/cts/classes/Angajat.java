@@ -7,15 +7,10 @@ public class Angajat extends Aplicant{
 	private int salariu;
 	private static float sumaFinantare = 10;
 	
-	public String getOcupatie() {
-		return ocupatie;
-	}
 	public void setOcupatie(String ocupatie) {
 		this.ocupatie = ocupatie;
 	}
-	public int getSalariu() {
-		return salariu;
-	}
+
 	public void setSalariu(int salariu) {
 		this.salariu = salariu;
 	}
@@ -36,12 +31,6 @@ public class Angajat extends Aplicant{
 	}
 	
 	
-	public int finantare() {
-		int s=10;
-		// TODO Auto-generated method stub
-		System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
-		return s;
-	}
 	@Override
 	public float getSumaFinantare() {
 		// TODO Auto-generated method stub
@@ -53,6 +42,12 @@ public class Angajat extends Aplicant{
 	}
 	public static void setSumaFinantare(float sumaFinantare) {
 		Angajat.sumaFinantare = sumaFinantare;
+	}
+
+	@Override
+	public void afiseazaSumaFinantare() {
+		// TODO Auto-generated method stub
+		System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste"+this.sumaFinantare+" Euro/zi in proiect.");
 	}
 	
 	

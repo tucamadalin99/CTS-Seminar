@@ -37,11 +37,6 @@ public class Elev extends Aplicant{
 		this.tutore = tutore;
 	}
 	
-	public int finantare() {
-		int s=30;
-		System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
-		return s;
-	}
 	@Override
 	public float getSumaFinantare() {
 		// TODO Auto-generated method stub
@@ -53,6 +48,11 @@ public class Elev extends Aplicant{
 	}
 	public static void setSumaFinantare(float sumaFinantare) {
 		Elev.sumaFinantare = sumaFinantare;
+	}
+	@Override
+	public void afiseazaSumaFinantare() {
+		// TODO Auto-generated method stub
+		System.out.println("Elevul "+getNume()+" "+getPrenume()+" primeste"+this.sumaFinantare+" Euro/zi in proiect.");
 	}
 	
 }

@@ -40,12 +40,6 @@ public class Student extends Aplicant {
 		return "Student: " + super.toString() + "Facultate=" + facultate + ", An_studii=" + anStudii;
 	}
 
-	public int finantare() {
-		int s = 20;
-		System.out.println("Studentul " + getNume() + " " + getPrenume() + " primeste" + s + " Euro/zi in proiect.");
-		return s;
-	}
-
 	@Override
 	public float getSumaFinantare() {
 		// TODO Auto-generated method stub
@@ -58,6 +52,12 @@ public class Student extends Aplicant {
 
 	public static void setSumaFinantare(float sumaFinantare) {
 		Student.sumaFinantare = sumaFinantare;
+	}
+
+	@Override
+	public void afiseazaSumaFinantare() {
+		System.out.println("Studentul " + getNume() + " " + getPrenume() + " primeste" + this.sumaFinantare + " Euro/zi in proiect.");
+		
 	}
 
 }
