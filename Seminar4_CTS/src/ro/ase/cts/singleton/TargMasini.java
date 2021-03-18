@@ -12,7 +12,7 @@ public class TargMasini {
 	
 	
 	
-	public TargMasini(String nume, String adresa, double profit, float[] capacitatiMotoare) {
+	private TargMasini(String nume, String adresa, double profit, float[] capacitatiMotoare) {
 		super();
 		this.nume = nume;
 		this.adresa = adresa;
@@ -59,10 +59,7 @@ public class TargMasini {
 
 
 	synchronized public static TargMasini getInstance(String nume, String adresa, double profit, float[] capacitatiMotoare) {
-		if(instance == null) {
-			instance = new TargMasini(nume, adresa, profit, capacitatiMotoare);
-		}
-		
+		instance = instance == null ? new TargMasini(nume, adresa, profit, capacitatiMotoare) : instance;	
 		return instance;
 	}
 

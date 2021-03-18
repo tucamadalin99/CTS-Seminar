@@ -26,6 +26,7 @@ public class Main {
 		
 		System.out.println(targ1.toString());
 		System.out.println(targ2.toString());
+		
 	}
 
 }
