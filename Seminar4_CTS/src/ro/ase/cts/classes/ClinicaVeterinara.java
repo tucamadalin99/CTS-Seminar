@@ -19,7 +19,7 @@ public class ClinicaVeterinara {
 	}
 	
 	//Returneaza instanta privata a clasei
-	public static ClinicaVeterinara getInstance() {
+	public static synchronized ClinicaVeterinara getInstance() {
 		return clinica;
 	}
 
