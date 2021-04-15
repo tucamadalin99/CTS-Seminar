@@ -1,6 +1,10 @@
 package ro.ase.cts.main;
 
 import ro.ase.cts.adapter.*;
+import ro.ase.cts.decorator.AbastractDecorator;
+import ro.ase.cts.decorator.Card;
+import ro.ase.cts.decorator.ConcreteDecorator;
+import ro.ase.cts.decorator.ICard;
 
 public class Main {
 	
@@ -13,6 +17,15 @@ public class Main {
 		Leasing leasing = new Leasing();
 		AdapterCreditObj adapter = new AdapterCreditObj(leasing);
 		oferaInfoCredit(adapter, "Ionel", 245.50f);
+		
+			ICard card = new Card("Mirel");
+			
+			card.platesteFizic();
+			card.platesteOnline();
+			
+			AbastractDecorator decorator = new ConcreteDecorator(card);
+
+	
 
 	}
 
