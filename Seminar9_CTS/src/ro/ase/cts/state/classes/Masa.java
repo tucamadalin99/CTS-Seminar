@@ -17,7 +17,7 @@ public class Masa {
 	}
 
 
-	public void setStareMasa(StareMasa stareMasa) {
+	void setStareMasa(StareMasa stareMasa) {
 		this.stareMasa = stareMasa;
 	}
 

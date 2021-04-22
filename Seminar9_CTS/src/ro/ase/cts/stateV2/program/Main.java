@@ -1,4 +1,4 @@
-package ro.ase.cts.state.program;
+package ro.ase.cts.stateV2.program;
 
 import ro.ase.cts.state.classes.Masa;
 import ro.ase.cts.state.classes.StareLibera;
