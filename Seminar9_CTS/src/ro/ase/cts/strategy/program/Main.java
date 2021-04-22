@@ -1,8 +1,8 @@
-package ro.ase.cts.program;
+package ro.ase.cts.strategy.program;
 
-import ro.ase.cts.classes.Card;
-import ro.ase.cts.classes.Cash;
-import ro.ase.cts.classes.Client;
+import ro.ase.cts.strategy.classes.Card;
+import ro.ase.cts.strategy.classes.Cash;
+import ro.ase.cts.strategy.classes.Client;
 
 public class Main {
 

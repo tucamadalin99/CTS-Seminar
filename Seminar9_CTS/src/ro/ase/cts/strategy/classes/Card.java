@@ -1,4 +1,4 @@
-package ro.ase.cts.classes;
+package ro.ase.cts.strategy.classes;
 
 public class Card implements ModPlata {
 	private float sold;
