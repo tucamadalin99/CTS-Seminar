@@ -12,8 +12,11 @@ public class Main {
 		// TODO Auto-generated method stub
 		ManagerComenzi managerComenzi = new ManagerComenzi();
 		managerComenzi.invoca(new Constituire(new ContBancar("Madalin"), 500));
+		managerComenzi.executaComanda();
 		managerComenzi.invoca(new Depunere(new ContBancar("Cezin"), 900));
+		managerComenzi.executaComanda();
 		managerComenzi.invoca(new Retragere(new ContBancar("Cebuc"), 400));
+		managerComenzi.executaComanda();
 	}
 
 }

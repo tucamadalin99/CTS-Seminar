@@ -1,7 +1,7 @@
 package ro.ase.cts.command;
 
 public abstract class Command {
-	private ContBancar cont;
+	protected ContBancar cont;
 	private float suma;
 	public abstract void executa();
 	
