@@ -13,6 +13,7 @@ public class Rezervare implements IRezervare {
 	public int getNrPers() {
 		return nrPers;
 	}
+	
 
 	@Override
 	public void anuntaRezervare() {

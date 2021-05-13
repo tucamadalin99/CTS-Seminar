@@ -24,7 +24,7 @@ public class Main {
 			card.platesteOnline();
 			
 			AbastractDecorator decorator = new ConcreteDecorator(card);
-
+			decorator.platesteContactless();
 	
 
 	}

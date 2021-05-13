@@ -13,8 +13,11 @@ public class Main {
 		Bilet bilet1 = new Bilet(0, "Echipa1", "Echipa2", "25");
 		Bilet bilet2 = (Bilet) bilet1.copy();
 		bilet2.setCod(1);
+		Bilet bilet3 = (Bilet) bilet1.copy();
+		bilet3.setCod(3);
 		
 		System.out.println(bilet2.toString());
+		System.out.println(bilet3.toString());
 	}
 
 }
