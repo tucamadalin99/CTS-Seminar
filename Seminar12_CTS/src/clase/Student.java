@@ -48,6 +48,16 @@ public class Student {
         if(index>=0 && index< note.size()){
             return note.get(index);
         }
-        throw new IndexOutOfBoundsException();
+        return 0;
     }
+    
+    public boolean areRestante() {
+    	for(int nota:note) {
+    		if(nota<5) {
+    			return false;
+    		}
+    	}
+    	return true;
+    }
+
 }
